@@ -13,7 +13,7 @@ Demo at https://preactubats.spelmakare.se
 
 ``` bash
 $ npm install -g preact-cli
-$ preact create smjn/preactubats my-project
+$ preact create smjnab/preactubats my-project
 $ cd my-project
 $ npm install
 $ npm run dev
