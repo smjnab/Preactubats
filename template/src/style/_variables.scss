@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/******************************************************************************************
+* Main Bulma colors
+**/
+$purple: #8a4d76;
+$pink-light: #fe8095;
+$pink: #ca4c61;
+$brown: #656753;
+$beige-light: #d0d1cd;
+$beige-lighter: #f5f6f2;
+
+/******************************************************************************************
+* Bulma vars
+**/
+$family-sans-serif: "Exo 2", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$danger: $pink-light;
+
+/******************************************************************************************
+* Bulma component vars
+**/
+$body-background-color: $beige-light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;

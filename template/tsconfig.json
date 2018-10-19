@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "allowJs": false,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
+    "strict": true,
+    "noImplicitAny": true
+  },
+  "include": [
+    "src/**/*.tsx",
+    "src/declarations.d.ts"
+  ]
+}

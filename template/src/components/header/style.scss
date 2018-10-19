@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/**
+* In .tsx import this file with import {selectorName1, selectorName2 etc ...} from "./style.scss".
+* Avoid @importing files with selector styling as it will create duplication.
+* Use mix() and anim() helpers for easy combination of variable and string styles.
+**/
