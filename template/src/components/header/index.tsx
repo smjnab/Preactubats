@@ -10,6 +10,15 @@ export default class Header extends Component {
 		this.toggleNavbar();
 	}
 
+	// Close menu when clicking/touching anywhere but the navbar.
+	upOutsideNavbar = (e: MouseEvent | TouchEvent) => {
+		if (e.srcElement.className.includes("nav")) return;
+		if (!this.navbarMenu.className.includes("is-active")) return;
+		e.stopPropagation();
+
+		this.toggleNavbar(false);
+	}
+
 	// Show/hide menu on making a selection.
 	toggleNavbar(onOff?: boolean) {
 		//Mobile
@@ -30,12 +39,13 @@ export default class Header extends Component {
 		this.navbarMenu = document.getElementsByClassName("navbar-menu")[0];
 		this.navbarDropdown = document.getElementById("navbarDropdown");
 
-		// On mobile, close menu when touching anywhere but the navbar.
-		document.addEventListener("click", (event: MouseEvent) => {
-			if (event.srcElement.className.includes("nav")) return;
+		document.addEventListener("mouseup", this.upOutsideNavbar);
+		document.addEventListener("touchend", this.upOutsideNavbar);
+	}
 
-			this.toggleNavbar(false);
-		});
+	componentWillUnmount() {
+		document.removeEventListener("mouseup", this.upOutsideNavbar);
+		document.removeEventListener("touchend", this.upOutsideNavbar);
 	}
 
 	render() {
