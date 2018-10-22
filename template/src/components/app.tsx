@@ -16,14 +16,20 @@ export default class App extends Component {
 		this.currentUrl = event.url;
 	};
 
-	componentDidMount() {
-		// Avoid initial flickering
-		document.onreadystatechange = () => {
-			if (document.readyState == "complete") {
-				document.getElementById("app").hidden = false;
-			}
-		}
+	// Avoid initial flickering when running production.
+	showSite = () => {
+		document.getElementById("app").hidden = false;
 	}
+
+	componentDidMount() {
+		if (process.env.NODE_ENV) this.showSite();
+		else document.addEventListener("readystatechange", this.showSite);
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener("readystatechange", this.showSite);
+	}
+
 
 	render() {
 		return (
