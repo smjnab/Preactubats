@@ -1,9 +1,11 @@
+!Out of date, new Preact-cli comes with Typescript template!
+
 # Preactubats
 [preact-cli](https://github.com/developit/preact-cli) template using [Typescript](https://github.com/Microsoft/TypeScript), [SCSS](https://github.com/sass/sass) and [Bulma CSS framework](https://github.com/jgthms/bulma). Template has the same content, with some additions, as the default preact-cli template and uses the styling from Bulma's [getting started guide](https://bulma.io/documentation/customize/with-node-sass/).
 
 In addition [Preact-async-route](https://github.com/prateekbh/preact-async-route) and [Preact-helmet](https://github.com/Download/preact-helmet) is used for async paths and modifying the default header. Typescript was added using [preact-cli-plugin-typescript](https://github.com/wub/preact-cli-plugin-typescript) with modifications, and styling integration to .tsx files is done using [typings-for-css-modules-loader](https://github.com/Jimdo/typings-for-css-modules-loader).
 
-Demo at https://preactubats.spelmakare.se
+Demo at //Removed as template has little purpose these days.
 
 ## Documentation
 - This is a modified [default] template for [preact-cli](https://github.com/developit/preact-cli).
